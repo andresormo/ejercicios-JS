@@ -6,3 +6,13 @@ const videogames = [
     {name: 'Genshin Impact', genders: ['RPG', 'Aventura'], score: 7.5},
     {name: 'Legend of Zelda: Breath of the wild', genders: ['RPG', 'La cosa más puto bonita que he visto nunca'], 
     score: 10}]
+
+const gamesFilter = videogames.filter(element=> element.genders.includes('RPG'))
+
+const gameReduce = gamesFilter.reduce((acu,actual)=>{
+    acu += actual.score/gamesFilter.length
+    return acu
+},0)
+
+console.log(gamesFilter);
+console.log(gameReduce);
